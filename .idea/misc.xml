@@ -5,6 +5,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Backend/BackendEternalCare/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/BackendEternalCare/bff-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/BackendEternalCare/contratos-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/BackendEternalCare/inventario-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/BackendEternalCare/operaciones-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/BackendEternalCare/programacion-service/pom.xml" />
       </list>
     </option>
   </component>

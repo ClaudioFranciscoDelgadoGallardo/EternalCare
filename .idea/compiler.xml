@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Annotation profile for programacion-service" enabled="true">
         <sourceOutputDir name="../generated-sources/annotations" />
         <sourceTestOutputDir name="../generated-test-sources/test-annotations" />
@@ -9,10 +10,23 @@
           <entry name="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/4.0.6/spring-boot-configuration-processor-4.0.6.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="programacion-service.main" />
+        <module name="inventario-service.main" />
         <module name="programacion-service.test" />
+        <module name="BackendEternalCare.main" />
+        <module name="contratos-service.test" />
+        <module name="bff-service.main" />
+        <module name="inventario-service.test" />
+        <module name="contratos-service.main" />
+        <module name="bff-service.test" />
+        <module name="programacion-service.main" />
+        <module name="BackendEternalCare.test" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="operaciones-service" target="17" />
+      <module name="operaciones-service.main" target="17" />
+      <module name="operaciones-service.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

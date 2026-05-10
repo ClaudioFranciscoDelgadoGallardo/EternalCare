@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for programacion-service" enabled="true">
+        <sourceOutputDir name="../generated-sources/annotations" />
+        <sourceTestOutputDir name="../generated-test-sources/test-annotations" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/4.0.6/spring-boot-configuration-processor-4.0.6.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="programacion-service.main" />
+        <module name="programacion-service.test" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BackendEternalCare" options="-parameters" />
+      <module name="BackendEternalCare.main" options="-parameters" />
+      <module name="BackendEternalCare.test" options="-parameters" />
+      <module name="bff-service" options="-parameters" />
+      <module name="bff-service.main" options="-parameters" />
+      <module name="bff-service.test" options="-parameters" />
+      <module name="contratos-service" options="-parameters" />
+      <module name="contratos-service.main" options="-parameters" />
+      <module name="contratos-service.test" options="-parameters" />
+      <module name="inventario-service" options="-parameters" />
+      <module name="inventario-service.main" options="-parameters" />
+      <module name="inventario-service.test" options="-parameters" />
+      <module name="operaciones-service" options="-parameters" />
+      <module name="operaciones-service.main" options="-parameters" />
+      <module name="operaciones-service.test" options="-parameters" />
+      <module name="programacion-service" options="-parameters" />
+      <module name="programacion-service.main" options="-parameters" />
+      <module name="programacion-service.test" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -28,6 +28,7 @@
     "accountId": "4c895d7b-b9d2-4dd0-a87f-bd502a8c3d91"
   }
 }]]></component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
 }]]></component>
@@ -42,9 +43,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.BackendEternalCareApplication.executor": "Run",
+    "Spring Boot.ProgramacionServiceApplication.executor": "Run",
     "git-widget-placeholder": "ClaDev",
     "last_opened_file_path": "C:/Users/SoraR/OneDrive/Escritorio/EternalCare",
     "node.js.detected.package.eslint": "true",
@@ -116,7 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1778398274366</updated>
-      <workItem from="1778398275811" duration="2812000" />
+      <workItem from="1778398275811" duration="3414000" />
     </task>
     <task id="LOCAL-00001" summary="se agrega backend">
       <option name="closed" value="true" />

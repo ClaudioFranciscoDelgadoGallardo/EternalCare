@@ -1,1 +1,52 @@
-services: { }
+services:
+  bff-service:
+    build:
+      context: ./bff-service
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      APP_INVENTARIO_URL: http://inventario-service:8081
+      APP_PROGRAMACION_URL: http://programacion-service:8082
+      APP_CONTRATOS_URL: http://contratos-service:8083
+    networks:
+      - eternal-network
+    restart: always
+    depends_on:
+      - inventario-service
+      - programacion-service
+      - contratos-service
+
+  inventario-service:
+    build:
+      context: ./inventario-service
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - eternal-network
+    restart: always
+
+  programacion-service:
+    build:
+      context: ./programacion-service
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    networks:
+      - eternal-network
+    restart: always
+
+  contratos-service:
+    build:
+      context: ./contratos-service
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    networks:
+      - eternal-network
+    restart: always
+
+networks:
+  eternal-network:
+    driver: bridge

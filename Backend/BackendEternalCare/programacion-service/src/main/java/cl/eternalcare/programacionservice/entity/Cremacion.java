@@ -2,23 +2,17 @@ package cl.eternalcare.programacionservice.entity;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDateTime;
+import lombok.Setter;
 
 @Entity
 @DiscriminatorValue("CREMACION")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 public class Cremacion extends Ceremonia {
-
-    public Cremacion(LocalDateTime fechaHora, String ubicacion, String estado) {
-        super(null, fechaHora, ubicacion, estado);
-    }
 
 }

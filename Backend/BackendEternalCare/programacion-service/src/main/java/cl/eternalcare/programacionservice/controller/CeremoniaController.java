@@ -27,25 +27,25 @@ public class CeremoniaController {
                 dto.getUbicacion(),
                 dto.getEstado()
             );
-            return new ResponseEntity<>(ceremonia, HttpStatus.CREATED);
+            return ResponseEntity.status(HttpStatus.CREATED).body(ceremonia);
         } catch (IllegalArgumentException e) {
-            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().build();
         }
     }
 
     @GetMapping
     public ResponseEntity<List<Ceremonia>> obtenerTodasLasCeremonias() {
         List<Ceremonia> ceremonias = programacionService.obtenerTodas();
-        return new ResponseEntity<>(ceremonias, HttpStatus.OK);
+        return ResponseEntity.ok(ceremonias);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Ceremonia> obtenerCeremoniaPorId(@PathVariable Long id) {
         try {
             Ceremonia ceremonia = programacionService.obtenerPorId(id);
-            return new ResponseEntity<>(ceremonia, HttpStatus.OK);
+            return ResponseEntity.ok(ceremonia);
         } catch (IllegalArgumentException e) {
-            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+            return ResponseEntity.notFound().build();
         }
     }
 
@@ -53,9 +53,9 @@ public class CeremoniaController {
     public ResponseEntity<Void> eliminarCeremonia(@PathVariable Long id) {
         try {
             programacionService.eliminar(id);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            return ResponseEntity.noContent().build();
         } catch (IllegalArgumentException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return ResponseEntity.notFound().build();
         }
     }
 

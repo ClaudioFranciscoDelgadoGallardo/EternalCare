@@ -10,17 +10,28 @@ public class CeremoniaFactory {
             throw new IllegalArgumentException("El tipo de ceremonia no puede ser nulo o vacío");
         }
 
+        Ceremonia ceremonia;
+
         switch (tipo.toUpperCase()) {
             case "FUNERAL":
-                return new Funeral(fechaHora, ubicacion, estado);
+                ceremonia = new Funeral();
+                break;
             case "CREMACION":
-                return new Cremacion(fechaHora, ubicacion, estado);
+                ceremonia = new Cremacion();
+                break;
             case "VISITA":
-                return new Visita(fechaHora, ubicacion, estado);
+                ceremonia = new Visita();
+                break;
             default:
                 throw new IllegalArgumentException("Tipo de ceremonia inválido: " + tipo + 
                     ". Los tipos válidos son: FUNERAL, CREMACION, VISITA");
         }
+
+        ceremonia.setFechaHora(fechaHora);
+        ceremonia.setUbicacion(ubicacion);
+        ceremonia.setEstado(estado);
+
+        return ceremonia;
     }
 
 }

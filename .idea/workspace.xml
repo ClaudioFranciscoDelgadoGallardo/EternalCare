@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="243d3f7d-55d4-449f-b08b-e4ad6ac2f3f1" name="Changes" comment="se agrega backend">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +144,7 @@
       <option name="presentableId" value="Default" />
       <updated>1778398274366</updated>
       <workItem from="1778398275811" duration="3414000" />
-      <workItem from="1778413585050" duration="2482000" />
+      <workItem from="1778413585050" duration="3262000" />
     </task>
     <task id="LOCAL-00001" summary="se agrega backend">
       <option name="closed" value="true" />

@@ -1,7 +1,5 @@
 package cl.eternalcare.bffservice;
 
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -23,27 +21,29 @@ public class BffController {
 
 	private final RestTemplate restTemplate;
 
-	@Value("${services.inventario.base-url}")
+	@Value("${app.inventario.url}")
 	private String inventarioBaseUrl;
 
-	@Value("${services.contratos.base-url}")
+	@Value("${app.programacion.url}")
+	private String programacionBaseUrl;
+
+	@Value("${app.contratos.url}")
 	private String contratosBaseUrl;
 
-	@GetMapping("/inventario/disponibles/{sector}")
-	public ResponseEntity<?> obtenerEspaciosDisponibles(@PathVariable String sector) {
+	@GetMapping("/espacios")
+	public ResponseEntity<?> obtenerEspaciosDisponibles() {
 		return restTemplate.exchange(
-				inventarioBaseUrl + "/disponibles/{sector}",
+				inventarioBaseUrl + "/api/espacios",
 				HttpMethod.GET,
 				HttpEntity.EMPTY,
-				Object.class,
-				sector
+				Object.class
 		);
 	}
 
 	@PostMapping("/contratos")
-	public ResponseEntity<?> crearContrato(@RequestBody Map<String, Object> contrato) {
+	public ResponseEntity<?> crearContrato(@RequestBody Object contrato) {
 		return restTemplate.exchange(
-				contratosBaseUrl,
+				contratosBaseUrl + "/api/contratos",
 				HttpMethod.POST,
 				new HttpEntity<>(contrato),
 				Object.class

@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #eef4ff 0%, #f4f7fb 40%, #edf2f7 100%);
+  color: var(--ec-text);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.page-surface {
+  animation: ecFadeIn 240ms ease-out;
+}
+
+.app-navbar {
+  background: linear-gradient(90deg, #0f172a 0%, #1d4ed8 100%);
+}
+
+.app-footer {
+  background: #0f172a;
+}
+
+.hero-card {
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, #1d4ed8 0%, #0f766e 100%);
+  color: #fff;
+  box-shadow: var(--ec-shadow);
+}
+
+.hero-card .text-secondary {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.hero-badge,
+.feature-box,
+.stat-card {
+  background: var(--ec-surface);
+  border: 1px solid var(--ec-border);
+  box-shadow: var(--ec-shadow);
+}
+
+.feature-box {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+@keyframes ecFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

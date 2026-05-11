@@ -1,0 +1,41 @@
+@import './variables.css';
+@import './layout.css';
+@import './components.css';
+
+.card-ec {
+  border: 1px solid var(--ec-border);
+  border-radius: 1.25rem;
+  box-shadow: var(--ec-shadow);
+  background: var(--ec-surface);
+}
+
+.btn-primary-ec {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--ec-primary);
+  --bs-btn-border-color: var(--ec-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #1e40af;
+  --bs-btn-hover-border-color: #1e40af;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #1e3a8a;
+  --bs-btn-active-border-color: #1e3a8a;
+  --bs-btn-disabled-bg: var(--ec-primary);
+  --bs-btn-disabled-border-color: var(--ec-primary);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--ec-primary);
+  --bs-btn-border-color: var(--ec-primary);
+  --bs-btn-hover-bg: #1e40af;
+  --bs-btn-hover-border-color: #1e40af;
+  --bs-btn-active-bg: #1e3a8a;
+  --bs-btn-active-border-color: #1e3a8a;
+}
+
+.text-primary {
+  color: var(--ec-primary) !important;
+}
+
+.text-secondary {
+  color: var(--ec-muted) !important;
+}

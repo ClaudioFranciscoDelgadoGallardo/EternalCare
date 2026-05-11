@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BackendEternalCareApplication<BackendEternalCare>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "cl.eternalcare.backendeternalcare.BackendEternalCareApplication",
+            "projectName": "BackendEternalCare",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

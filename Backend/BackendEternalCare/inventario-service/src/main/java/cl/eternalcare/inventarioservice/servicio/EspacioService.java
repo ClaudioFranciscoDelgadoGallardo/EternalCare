@@ -13,6 +13,32 @@ public class EspacioService {
 
     private final EspacioRepository espacioRepository;
 
+    public List<Espacio> listarTodos() {
+        return espacioRepository.findAll();
+    }
+
+    public Espacio obtenerPorId(Long id) {
+        return espacioRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("No existe un espacio con id: " + id));
+    }
+
+    @Transactional
+    public Espacio registrarEspacio(Espacio espacio) {
+        if (espacio.getSector() == null || espacio.getSector().isBlank()) {
+            throw new IllegalArgumentException("sector es obligatorio");
+        }
+
+        if (espacio.getTipo() == null || espacio.getTipo().isBlank()) {
+            throw new IllegalArgumentException("tipo es obligatorio");
+        }
+
+        if (espacio.getEstado() == null || espacio.getEstado().isBlank()) {
+            espacio.setEstado("disponible");
+        }
+
+        return espacioRepository.save(espacio);
+    }
+
     public List<Espacio> listarDisponibles(String sector) {
         return espacioRepository.findBySectorAndEstado(sector, "disponible");
     }

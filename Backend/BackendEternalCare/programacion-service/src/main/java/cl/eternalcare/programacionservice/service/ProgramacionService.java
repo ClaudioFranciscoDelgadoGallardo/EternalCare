@@ -20,6 +20,16 @@ public class ProgramacionService {
         return ceremoniasRepository.save(ceremonia);
     }
 
+    public List<Ceremonia> obtenerPorTipo(String tipo) {
+        if (tipo == null || tipo.isBlank()) {
+            return obtenerTodas();
+        }
+
+        return ceremoniasRepository.findAll().stream()
+            .filter(ceremonia -> ceremonia.getClass().getSimpleName().equalsIgnoreCase(tipo))
+            .toList();
+    }
+
     public List<Ceremonia> obtenerTodas() {
         return ceremoniasRepository.findAll();
     }

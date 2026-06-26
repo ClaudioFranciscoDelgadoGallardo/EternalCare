@@ -39,6 +39,11 @@ public class CeremoniaController {
         return ResponseEntity.ok(ceremonias);
     }
 
+    @GetMapping("/tipo/{tipo}")
+    public ResponseEntity<List<Ceremonia>> obtenerCeremoniasPorTipo(@PathVariable String tipo) {
+        return ResponseEntity.ok(programacionService.obtenerPorTipo(tipo));
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Ceremonia> obtenerCeremoniaPorId(@PathVariable Long id) {
         try {

@@ -12,6 +12,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -86,7 +93,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BffServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ContratosServiceApplication">
     <configuration name="BackendEternalCareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="BackendEternalCare.main" />
@@ -146,6 +153,8 @@
       <workItem from="1778398275811" duration="3414000" />
       <workItem from="1778413585050" duration="3262000" />
       <workItem from="1778487178604" duration="3475000" />
+      <workItem from="1782453478728" duration="339000" />
+      <workItem from="1782453882745" duration="5528000" />
     </task>
     <task id="LOCAL-00001" summary="se agrega backend">
       <option name="closed" value="true" />

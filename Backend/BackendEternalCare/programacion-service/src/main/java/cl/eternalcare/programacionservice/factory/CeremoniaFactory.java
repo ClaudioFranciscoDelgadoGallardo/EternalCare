@@ -29,7 +29,7 @@ public class CeremoniaFactory {
 
         ceremonia.setFechaHora(fechaHora);
         ceremonia.setUbicacion(ubicacion);
-        ceremonia.setEstado(estado);
+        ceremonia.setEstado(estado == null || estado.isBlank() ? "PROGRAMADA" : estado);
 
         return ceremonia;
     }

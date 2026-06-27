@@ -1,14 +1,34 @@
 {
+    "version": "0.2.0",
     "configurations": [
         {
             "type": "java",
-            "name": "Spring Boot-BackendEternalCareApplication<BackendEternalCare>",
+            "name": "▶ Run Contratos Service",
             "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "cl.eternalcare.backendeternalcare.BackendEternalCareApplication",
-            "projectName": "BackendEternalCare",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "cwd": "${workspaceFolder}/Backend/BackendEternalCare/contratos-service",
+            "mainClass": "cl.eternalcare.contratosservice.ContratosServiceApplication",
+            "projectName": "contratos-service",
+            "env": {
+                "SUPABASE_URL": "jdbc:postgresql://aws-1-us-east-2.pooler.supabase.com:5432/postgres",
+                "SUPABASE_USER": "postgres.gewkweksppoxwfdoatux",
+                "SUPABASE_PASSWORD": "EternalCare123."
+            }
+        },
+        {
+            "type": "java",
+            "name": "▶ Run Inventario Service",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Backend/BackendEternalCare/inventario-service",
+            "mainClass": "cl.eternalcare.inventarioservice.InventarioServiceApplication",
+            "projectName": "inventario-service"
+        },
+        {
+            "type": "java",
+            "name": "▶ Run Programacion Service",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Backend/BackendEternalCare/programacion-service",
+            "mainClass": "cl.eternalcare.programacionservice.ProgramacionServiceApplication",
+            "projectName": "programacion-service"
         }
     ]
 }

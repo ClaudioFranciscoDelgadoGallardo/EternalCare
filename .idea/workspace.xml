@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="243d3f7d-55d4-449f-b08b-e4ad6ac2f3f1" name="Changes" comment="se agrega backend">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,7 @@
     &quot;Spring Boot.ContratosServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.InventarioServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.ProgramacionServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ClaDev&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Develop&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SoraR/OneDrive/Escritorio/EternalCare&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -93,7 +95,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ContratosServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ProgramacionServiceApplication">
     <configuration name="BackendEternalCareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="BackendEternalCare.main" />
@@ -111,6 +113,11 @@
       </method>
     </configuration>
     <configuration name="ContratosServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="SUPABASE_PASSWORD" value="EternalCare123." />
+        <env name="SUPABASE_URL" value="jdbc:postgresql://[aws-1-us-east-2.pooler.supabase.com:5432/postgres](https://aws-1-us-east-2.pooler.supabase.com:5432/postgres)" />
+        <env name="SUPABASE_USER" value="postgres.gewkweksppoxwfdoatux" />
+      </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="contratos-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cl.eternalcare.contratosservice.ContratosServiceApplication" />
@@ -119,6 +126,11 @@
       </method>
     </configuration>
     <configuration name="InventarioServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="SUPABASE_USER" value="postgres.gewkweksppoxwfdoatux" />
+        <env name="SUPABASE_PASSWORD" value="EternalCare123." />
+        <env name="SUPABASE_URL" value="jdbc:postgresql://[aws-1-us-east-2.pooler.supabase.com:5432/postgres](https://aws-1-us-east-2.pooler.supabase.com:5432/postgres)" />
+      </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="inventario-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cl.eternalcare.inventarioservice.InventarioServiceApplication" />
@@ -127,6 +139,11 @@
       </method>
     </configuration>
     <configuration name="ProgramacionServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="SUPABASE_URL" value="jdbc:postgresql://[aws-1-us-east-2.pooler.supabase.com:5432/postgres](https://aws-1-us-east-2.pooler.supabase.com:5432/postgres)" />
+        <env name="SUPABASE_USER" value="postgres.gewkweksppoxwfdoatux" />
+        <env name="SUPABASE_PASSWORD" value="EternalCare123." />
+      </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="programacion-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cl.eternalcare.programacionservice.ProgramacionServiceApplication" />
@@ -134,6 +151,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BackendEternalCareApplication" />
+      <item itemvalue="Spring Boot.BffServiceApplication" />
+      <item itemvalue="Spring Boot.ContratosServiceApplication" />
+      <item itemvalue="Spring Boot.InventarioServiceApplication" />
+      <item itemvalue="Spring Boot.ProgramacionServiceApplication" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -155,6 +179,8 @@
       <workItem from="1778487178604" duration="3475000" />
       <workItem from="1782453478728" duration="339000" />
       <workItem from="1782453882745" duration="5528000" />
+      <workItem from="1782469890566" duration="38000" />
+      <workItem from="1782547461132" duration="5567000" />
     </task>
     <task id="LOCAL-00001" summary="se agrega backend">
       <option name="closed" value="true" />

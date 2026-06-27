@@ -1,18 +1,17 @@
 package cl.eternalcare.programacionservice.factory;
 
-import cl.eternalcare.programacionservice.entity.*;
-import java.time.LocalDateTime;
+import cl.eternalcare.programacionservice.model.Ceremonia;
+import cl.eternalcare.programacionservice.model.Cremacion;
+import cl.eternalcare.programacionservice.model.Funeral;
+import cl.eternalcare.programacionservice.model.Visita;
+import cl.eternalcare.programacionservice.dto.CeremoniaDTO;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CeremoniaFactory {
-
-    public static Ceremonia crearCeremonia(String tipo, LocalDateTime fechaHora, String ubicacion, String estado) {
-        if (tipo == null || tipo.isEmpty()) {
-            throw new IllegalArgumentException("El tipo de ceremonia no puede ser nulo o vacío");
-        }
-
+    public Ceremonia crearCeremonia(CeremoniaDTO dto) {
         Ceremonia ceremonia;
-
-        switch (tipo.toUpperCase()) {
+        switch (dto.getTipoCeremonia().toUpperCase()) {
             case "FUNERAL":
                 ceremonia = new Funeral();
                 break;
@@ -23,15 +22,16 @@ public class CeremoniaFactory {
                 ceremonia = new Visita();
                 break;
             default:
-                throw new IllegalArgumentException("Tipo de ceremonia inválido: " + tipo + 
-                    ". Los tipos válidos son: FUNERAL, CREMACION, VISITA");
+                throw new IllegalArgumentException("Tipo de ceremonia no válido: " + dto.getTipoCeremonia());
         }
-
-        ceremonia.setFechaHora(fechaHora);
-        ceremonia.setUbicacion(ubicacion);
-        ceremonia.setEstado(estado == null || estado.isBlank() ? "PROGRAMADA" : estado);
-
+        // Poblar datos comunes
+        ceremonia.setClienteId(dto.getClienteId());
+        ceremonia.setContratoId(dto.getContratoId());
+        ceremonia.setEspacioId(dto.getEspacioId());
+        ceremonia.setFechaHora(dto.getFechaHora());
+        ceremonia.setUbicacion(dto.getUbicacion());
+        ceremonia.setResponsableUsuarioId(dto.getResponsableUsuarioId());
+        ceremonia.setObservacion(dto.getObservacion());
         return ceremonia;
     }
-
 }

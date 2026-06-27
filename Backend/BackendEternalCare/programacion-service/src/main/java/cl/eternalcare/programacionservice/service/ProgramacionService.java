@@ -1,49 +1,30 @@
 package cl.eternalcare.programacionservice.service;
 
-import cl.eternalcare.programacionservice.entity.Ceremonia;
+import cl.eternalcare.programacionservice.dto.CeremoniaDTO;
+import cl.eternalcare.programacionservice.enums.EstadoCeremonia;
 import cl.eternalcare.programacionservice.factory.CeremoniaFactory;
+import cl.eternalcare.programacionservice.model.Ceremonia;
 import cl.eternalcare.programacionservice.repository.CeremoniaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class ProgramacionService {
 
-    private final CeremoniaRepository ceremoniasRepository;
-
-    public Ceremonia agendar(String tipo, LocalDateTime fechaHora, String ubicacion, String estado) {
-        Ceremonia ceremonia = CeremoniaFactory.crearCeremonia(tipo, fechaHora, ubicacion, estado);
-        return ceremoniasRepository.save(ceremonia);
-    }
-
-    public List<Ceremonia> obtenerPorTipo(String tipo) {
-        if (tipo == null || tipo.isBlank()) {
-            return obtenerTodas();
-        }
-
-        return ceremoniasRepository.findAll().stream()
-            .filter(ceremonia -> ceremonia.getClass().getSimpleName().equalsIgnoreCase(tipo))
-            .toList();
-    }
+    private final CeremoniaRepository repository;
+    private final CeremoniaFactory factory;
 
     public List<Ceremonia> obtenerTodas() {
-        return ceremoniasRepository.findAll();
+        return repository.findAll();
     }
 
-    public Ceremonia obtenerPorId(Long id) {
-        return ceremoniasRepository.findById(id)
-            .orElseThrow(() -> new IllegalArgumentException("Ceremonia no encontrada con ID: " + id));
+    @Transactional
+    public Ceremonia programarCeremonia(CeremoniaDTO dto) {
+        Ceremonia nuevaCeremonia = factory.crearCeremonia(dto);
+        nuevaCeremonia.setEstado(EstadoCeremonia.PROGRAMADA);
+        return repository.save(nuevaCeremonia);
     }
-
-    public void eliminar(Long id) {
-        if (!ceremoniasRepository.existsById(id)) {
-            throw new IllegalArgumentException("Ceremonia no encontrada con ID: " + id);
-        }
-        ceremoniasRepository.deleteById(id);
-    }
-
 }

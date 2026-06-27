@@ -1,7 +1,8 @@
-package cl.eternalcare.inventarioservice.controlador;
+package cl.eternalcare.inventarioservice.controller;
 
-import cl.eternalcare.inventarioservice.entidad.Espacio;
-import cl.eternalcare.inventarioservice.servicio.EspacioService;
+import cl.eternalcare.inventarioservice.model.Espacio;
+import cl.eternalcare.inventarioservice.dto.EspacioRequestDTO;
+import cl.eternalcare.inventarioservice.service.EspacioService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -35,11 +36,11 @@ public class EspacioController {
     }
 
     @PostMapping
-    public ResponseEntity<Espacio> crearEspacio(@RequestBody Espacio espacio) {
+    public ResponseEntity<?> crearEspacio(@RequestBody EspacioRequestDTO dto) {
         try {
-            return ResponseEntity.status(HttpStatus.CREATED).body(espacioService.registrarEspacio(espacio));
+            return ResponseEntity.status(HttpStatus.CREATED).body(espacioService.registrarEspacio(dto));
         } catch (IllegalArgumentException ex) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body(ex.getMessage());
         }
     }
 
@@ -49,13 +50,13 @@ public class EspacioController {
     }
 
     @PostMapping("/{id}/reservar")
-    public ResponseEntity<Espacio> reservarEspacio(@PathVariable Long id) {
+    public ResponseEntity<?> reservarEspacio(@PathVariable Long id) {
         try {
             return ResponseEntity.ok(espacioService.reservarEspacio(id));
         } catch (IllegalArgumentException ex) {
             return ResponseEntity.notFound().build();
         } catch (IllegalStateException ex) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).build();
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage());
         }
     }
 }

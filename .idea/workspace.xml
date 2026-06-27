@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="243d3f7d-55d4-449f-b08b-e4ad6ac2f3f1" name="Changes" comment="se agrega backend">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProgramacionServiceApplication">
+  <component name="RunManager" selected="Spring Boot.BffServiceApplication">
     <configuration name="BackendEternalCareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="BackendEternalCare.main" />
@@ -106,7 +106,7 @@
     </configuration>
     <configuration name="BffServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="bff-service.main" />
+      <module name="bff-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cl.eternalcare.bffservice.BffServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,7 +180,7 @@
       <workItem from="1782453478728" duration="339000" />
       <workItem from="1782453882745" duration="5528000" />
       <workItem from="1782469890566" duration="38000" />
-      <workItem from="1782547461132" duration="5567000" />
+      <workItem from="1782547461132" duration="10366000" />
     </task>
     <task id="LOCAL-00001" summary="se agrega backend">
       <option name="closed" value="true" />

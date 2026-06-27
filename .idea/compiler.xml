@@ -14,15 +14,21 @@
         <module name="programacion-service.test" />
         <module name="BackendEternalCare.main" />
         <module name="contratos-service.test" />
-        <module name="bff-service.main" />
         <module name="inventario-service.test" />
         <module name="contratos-service.main" />
-        <module name="bff-service.test" />
         <module name="programacion-service.main" />
         <module name="BackendEternalCare.test" />
       </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bff-service" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="bff-service.main" target="17" />
+      <module name="bff-service.test" target="17" />
       <module name="operaciones-service" target="17" />
       <module name="operaciones-service.main" target="17" />
       <module name="operaciones-service.test" target="17" />

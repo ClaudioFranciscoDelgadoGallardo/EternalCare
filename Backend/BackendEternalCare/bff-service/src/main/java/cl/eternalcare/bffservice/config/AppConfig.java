@@ -1,4 +1,4 @@
-package cl.eternalcare.bffservice;
+package cl.eternalcare.bffservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
